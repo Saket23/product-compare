@@ -77,12 +77,19 @@ class Container extends PureComponent<Props, State> {
   render() {
     const { data, dropdownOptions, isDataLoaded } = this.props;
     const { firstProduct, secondProduct, showOnlyDiff } = this.state;
+    let count = 0;
+    if(Object.keys(firstProduct).length !== 0){
+      count++
+    }
+    if(Object.keys(secondProduct).length !== 0){
+      count++
+    }
     return (
       <Wrapper>
         {isDataLoaded && (
           <>
             <TopPanel
-              selectedCount={1}
+              selectedCount={count}
               data={data}
               dropdownOptions={dropdownOptions}
               onListClickFirst={this.onListClickFirst}

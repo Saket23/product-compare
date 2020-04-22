@@ -6,7 +6,7 @@ import { Wrapper } from "./styles/selectProduct";
 import Dropdown from "./Dropdown";
 import SelectedProduct from "./SelectedProduct";
 
-import type {Product} from "./type"
+import type {Product} from "./type";
 
 type Props={
   dropdownOptions: Array<Product>,
